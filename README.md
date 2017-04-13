@@ -3,7 +3,7 @@ Here is my [CV](RakitinMS_CV.pdf). See more at http://staff.ps.bnl.gov/staff.asp
 
 # Compile instructions:
 - Install [TeX Live](https://www.tug.org/texlive/acquire-netinstall.html)
-- Install [Exlipse](https://www.eclipse.org/downloads/) (Eclipse IDE for Java Developers)
+- Install [Eclipse IDE](https://www.eclipse.org/downloads/)
 - Install [TeXlipse](http://texlipse.sourceforge.net/manual/installation.html)
 - Configure a LaTeX project:
 ![](images/CV_texlipse_project_prop.png)
