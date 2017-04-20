@@ -1,1 +1,9 @@
+# PyCharm:
 .idea/
+
+# TeXlipse/Eclipse:
+.project
+
+# LaTeX:
+RakitinMS_CV.synctex.gz
+tmp/
