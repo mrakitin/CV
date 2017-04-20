@@ -11,3 +11,6 @@ Here is my [CV](RakitinMS_CV.pdf). See more at http://staff.ps.bnl.gov/staff.asp
 ![](images/CV_texlipse_builder_settings.png)
 
 You are ready to go - when you change anything in the CV.tex file, the TeXlipse will recompile the `.pdf` file automatically.
+
+# Bibliography
+I prefer and recommend to use [JabRef](http://www.jabref.org/), a cross-platform bibliography management tool, which works great with MS Word as well.
