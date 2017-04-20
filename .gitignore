@@ -7,3 +7,6 @@
 # LaTeX:
 RakitinMS_CV.synctex.gz
 tmp/
+
+# JabRef/BibTeX:
+*.bib.bak
