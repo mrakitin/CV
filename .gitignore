@@ -5,7 +5,7 @@
 .project
 
 # LaTeX:
-RakitinMS_CV.synctex.gz
+*.synctex.gz
 tmp/
 
 # JabRef/BibTeX:

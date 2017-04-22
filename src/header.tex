@@ -1,0 +1,75 @@
+% CV of Maksim Rakitin
+\documentclass[11pt,letterpaper,sans]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and
+% 'roman' (for roman fonts, instead of sans serif fonts)
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\setlength{\hintscolumnwidth}{0.16\textwidth}
+
+\usepackage{url}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Maksim S. Rakitin, Ph.D.}
+\lhead{\titlename}
+\rfoot{Page \thepage / \pageref{LastPage}}
+\lfoot{Last updated on \today}
+
+% personal data
+\firstname{Maksim S.}
+\familyname{Rakitin}
+\title{\titlename}
+\address{NSLS-II,\\Brookhaven National Laboratory,\\Upton, NY 11973\\}{}
+\phone {+1~(631)~344-8299}
+\email{mrakitin@bnl.gov}
+\homepage{mrakitin.xyz}
+
+\makeatletter
+% to show numerical labels in the bibliography:
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+% Organize publication numbering in the reverse order. Solutions from:
+% - https://tex.stackexchange.com/a/22770
+% - https://tex.stackexchange.com/a/163455
+% - http://www.ctan.org/pkg/totcount
+\usepackage{totcount}
+\newtotcounter{citnum}
+\def\oldbibitem{} \let\oldbibitem=\bibitem
+\def\bibitem{\stepcounter{citnum}\oldbibitem}
+\renewcommand*{\@biblabel}[1]{
+    \number\numexpr\totvalue{citnum} + 1 - #1.
+}
+
+\makeatother
+
+% Define shortcuts for multiple-used links:
+% Conferences:
+\newcommand{\www}{\includegraphics[scale=0.05]{images/link.png}}
+\newcommand{\pdf}{\includegraphics[scale=0.13]{images/book.png}}
+
+% Logos:
+\newcommand{\logoBNL}{\includegraphics[scale=0.3]{images/logo_BNL.png}}
+\newcommand{\logoSBU}{\includegraphics[scale=0.4]{images/logo_SBU.png}}
+\newcommand{\logoUSPEX}{\includegraphics[scale=0.20]{images/logo_USPEX.png}}
+\newcommand{\logoSUSU}{\includegraphics[scale=0.2]{images/logo_SUSU.png}}
+\newcommand{\logoAT}{\includegraphics[scale=0.36]{images/logo_AT.png}}
+\newcommand{\logoRocket}{\includegraphics[scale=0.21]{images/logo_Rocket.png}}
+\newcommand{\logoRadiaSoft}{\includegraphics[scale=0.17]{images/logo_RadiaSoft.png}}
+\newcommand{\logoUCF}{\includegraphics[scale=0.3]{images/logo_UCF.png}}
+\newcommand{\logoUNLV}{\includegraphics[scale=0.22]{images/logo_UNLV.png}}
+
+% Decorate links:
+\newcommand{\colorify}[1]{\textcolor{blue}{#1}}
+\newcommand{\mylink}[1]{\href{#1}{\colorify{#1}}}
+\newcommand{\mylinkn}[2]{\href{#1}{\colorify{#2}}}
+\newcommand{\mylinkm}[1]{\href{mailto:#1}{\colorify{#1}}}
+
