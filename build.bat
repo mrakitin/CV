@@ -15,8 +15,18 @@
 :: -dPDFSETTINGS=/default  (almost identical to /screen)
 
 :: General options:
-set owner=RakitinMS
 set tmpdir=tmp
+set owner=RakitinMS
+
+:: Files to generate pdfs for:
+set cv=%owner%_CV
+set jobs=%owner%_jobs
+set edu=%owner%_edu
+set awards=%owner%_awards
+set skills=%owner%_skills
+set refs=%owner%_refs
+set pubs=%owner%_pubs
+set confs=%owner%_confs
 
 :: Create a temp dir if it does not exist:
 if not exist %tmpdir% (
@@ -33,13 +43,13 @@ set compatibility=1.4
 set quality=printer
 
 setlocal enabledelayedexpansion
-for %%b in (CV pubs) do (
-    :: Set loop-dependant variables:
+for %%b in (%cv% %pubs% %jobs% %edu% %awards% %skills% %refs% %pubs% %confs%) do (
+    :: Set loop-dependent variables:
     set texfile=%%b.tex
     set auxfile=%%b.aux
     set pdffile=%%b.pdf
-    set finalpdf="%owner%_%%b.pdf"
-    set compressedpdf="%owner%_%%b_comp.pdf"
+    set finalpdf="%%b.pdf"
+    set compressedpdf="%%b_comp.pdf"
 
     :: Sequence of LaTeX commands from https://tex.stackexchange.com/a/13012.
     :: Solution for the local variables from http://stackoverflow.com/a/13809834/4143531.
