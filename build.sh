@@ -20,7 +20,7 @@ if [ ! -d "$tmpdir" ]; then
 fi
 
 # LaTeX options:
-outdir="--output-directory=$tmpdir"
+outdir="-output-directory=$tmpdir"
 nonstop="-interaction=nonstopmode"
 
 # GhostScript parameters:
@@ -39,7 +39,7 @@ for b in $cv $pubs $jobs $edu $awards $skills $refs $pubs $confs; do
     latex $nonstop $outdir $texfile
     bibtex ${tmpdir}/${auxfile}
     latex $nonstop $outdir $texfile
-    pdflatex -synctex=1 $nonstop --src-specials $outdir $texfile
+    pdflatex -synctex=1 --src-specials $nonstop $outdir $texfile
 
     # Copy the resulted file from the temp dir:
     cp -fv ${tmpdir}/${pdffile} $finalpdf

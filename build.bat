@@ -34,7 +34,7 @@ if not exist %tmpdir% (
 )
 
 :: LaTeX options:
-set outdir="--output-directory=%tmpdir%"
+set outdir="-output-directory=%tmpdir%"
 set nonstop="-interaction=nonstopmode"
 
 :: GhostScript parameters:
