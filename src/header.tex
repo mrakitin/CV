@@ -2,9 +2,8 @@
 \documentclass[11pt,letterpaper,sans]{moderncv}
 
 % moderncv themes
-\moderncvtheme[blue]{classic}
-% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and
-% 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvstyle{casual}  % style options: 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}    % color options: 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 
 % character encoding
 \usepackage[utf8]{inputenc}
@@ -13,6 +12,7 @@
 \usepackage[scale=0.8]{geometry}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{fontawesome}
 \setlength{\hintscolumnwidth}{0.16\textwidth}
 
 \usepackage{url}
@@ -23,16 +23,20 @@
 \rhead{Maksim S. Rakitin, Ph.D.}
 \lhead{\titlename}
 \rfoot{Page \thepage / \pageref{LastPage}}
-\lfoot{Last updated on \today}
+\lfoot{\vspace{-0.74cm}Last updated: \\ \today}
+\setlength{\footskip}{-10pt}
 
 % personal data
 \firstname{Maksim S.}
 \familyname{Rakitin}
 \title{\titlename}
-\address{NSLS-II,\\Brookhaven National Laboratory,\\Upton, NY 11973\\}{}
-\phone {+1~(631)~344-8299}
+\address{NSLS-II}{Brookhaven National Laboratory}{Upton, NY 11973}
+\phone[fixed]{(631)~344--8299}
+\phone[mobile]{(631)~403--0741}
 \email{mrakitin@bnl.gov}
 \homepage{mrakitin.xyz}
+\social[linkedin]{mrakitin}
+\social[github]{mrakitin}
 
 \makeatletter
 % to show numerical labels in the bibliography:
@@ -68,9 +72,11 @@
 \newcommand{\logoUNLV}{\includegraphics[scale=0.22]{images/logo_UNLV.png}}
 
 % Decorate links:
-\newcommand{\colorify}[1]{\textcolor{blue}{#1}}
+\definecolor{linkcolor}{HTML}{2A5DB0}  % from https://gigaom.com/2009/07/09/when-it-comes-to-links-color-matters/
+\newcommand{\colorify}[1]{\textcolor{linkcolor}{#1}}
 \newcommand{\mylink}[1]{\href{#1}{\colorify{#1}}}
 \newcommand{\mylinkn}[2]{\href{#1}{\colorify{#2}}}
+\newcommand{\mylinkb}[2]{\href{#1}{#2}}
 \newcommand{\mylinkm}[1]{\href{mailto:#1}{\colorify{#1}}}
 
 % Bib file:

@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Sat Apr 22 15:29:31 EDT 2017
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=RakitinMS_CV.tex
+outputFile=RakitinMS_CV.pdf
+langSpell=en
+markDer=true
+srcDir=
