@@ -10,3 +10,4 @@ tmp/
 
 # JabRef/BibTeX:
 *.bib.bak
+*.bib.sav
