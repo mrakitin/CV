@@ -7,6 +7,9 @@
 # LaTeX:
 *.synctex.gz
 tmp/
+*.aux
+*.log
+*.out
 
 # JabRef/BibTeX:
 *.bib.bak
