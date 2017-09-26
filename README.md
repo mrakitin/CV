@@ -10,7 +10,7 @@ Here is my [CV](RakitinMS_CV.pdf). See more at http://staff.ps.bnl.gov/staff.asp
   $ sudo apt install texlive-latex-extra
   ```
 - Install [Eclipse IDE](https://www.eclipse.org/downloads/)
-- Install [TeXlipse](http://texlipse.sourceforge.net/manual/installation.html)
+- Install ~~[TeXlipse](http://texlipse.sourceforge.net/manual/installation.html)~~ [new TeXlipse](https://github.com/eclipse/texlipse) (more info about new version is at [link 1](http://www.eclipse.org/community/eclipse_newsletter/2016/november/article3.php) and [link 2](https://projects.eclipse.org/projects/science.texlipse))
 - Configure a LaTeX project:
 ![](images/CV_texlipse_project_prop.png)
 - Click `Setup build tools...` and confugure the builder:
