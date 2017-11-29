@@ -12,11 +12,11 @@ pdfs = {
     '2017.05_Blednykh.pdf': [1],
     '2017.05_Chubar.pdf': [1],
     '2017.05_Davari.pdf': [1],
-    '2017.08-01_Idir.pdf': range(1, 3),
-    '2017.08-02_Wiegart.pdf': range(1, 3),
-    '2017.08-03_Chubar.pdf': range(1, 3),
-    '2017.08-04_Chubar.pdf': range(1, 3),
-    '2017.08-05_Rakitin.pdf': range(1, 3),
+    '2017.08-01_Idir.pdf': range(2, 3),
+    '2017.08-02_Wiegart.pdf': range(2, 3),
+    '2017.08-03_Chubar.pdf': range(2, 3),
+    '2017.08-04_Chubar.pdf': range(2, 3),
+    '2017.08-05_Rakitin.pdf': range(2, 3),
 }
 
 pdfs = OrderedDict(sorted(pdfs.items(), reverse=True))
