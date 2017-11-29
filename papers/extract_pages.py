@@ -21,8 +21,8 @@ pdfs = {
 
 pdfs = OrderedDict(sorted(pdfs.items(), reverse=True))
 
-# one_file = True
-one_file = False
+one_file = True
+# one_file = False
 if one_file:
     output = PdfFileWriter()
 
@@ -44,9 +44,12 @@ for pdf_name, pdf_pages in tqdm(pdfs.items()):
     if not one_file:
         tqdm.write('  Output file: {}'.format(out_name))
         output = PdfFileWriter()
-        for i in pdf_pages:
-            tqdm.write('      Getting page {}...'.format(i))
-            output.addPage(inputpdf.getPage(i-1))
+
+    for i in pdf_pages:
+        tqdm.write('      Getting page {}...'.format(i))
+        output.addPage(inputpdf.getPage(i-1))
+
+    if not one_file:
         with open(out_name, 'wb') as oStream:
             output.write(oStream)
 
