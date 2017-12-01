@@ -13,6 +13,7 @@ skills="${owner}_skills"
 refs="${owner}_refs"
 pubs="${owner}_pubs"
 confs="${owner}_confs"
+bio="${owner}_bio"
 
 # Create a temp dir if it does not exist:
 if [ ! -d "$tmpdir" ]; then
@@ -28,7 +29,7 @@ gs="ghostscript"
 compatibility="1.4"
 quality="printer"
 
-for b in $cv $pubs $jobs $edu $awards $skills $refs $pubs $confs; do
+for b in $cv $pubs $jobs $edu $awards $skills $refs $pubs $confs $bio; do
     texfile="${b}.tex"
     auxfile="${b}.aux"
     pdffile="${b}.pdf"

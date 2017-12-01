@@ -27,6 +27,7 @@ set skills=%owner%_skills
 set refs=%owner%_refs
 set pubs=%owner%_pubs
 set confs=%owner%_confs
+set bio=%owner%_bio
 
 :: Create a temp dir if it does not exist:
 if not exist %tmpdir% (
@@ -43,7 +44,7 @@ set compatibility=1.4
 set quality=printer
 
 setlocal enabledelayedexpansion
-for %%b in (%cv% %pubs% %jobs% %edu% %awards% %skills% %refs% %pubs% %confs%) do (
+for %%b in (%cv% %pubs% %jobs% %edu% %awards% %skills% %refs% %pubs% %confs% %bio%) do (
     :: Set loop-dependent variables:
     set texfile=%%b.tex
     set auxfile=%%b.aux
