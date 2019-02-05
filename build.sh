@@ -25,7 +25,8 @@ outdir="-output-directory=$tmpdir"
 nonstop="-interaction=nonstopmode"
 
 # GhostScript parameters:
-gs="ghostscript"
+# gs="ghostscript"
+gs="gs"  # on Mac
 compatibility="1.4"
 quality="printer"
 
