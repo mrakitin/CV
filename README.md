@@ -22,4 +22,3 @@ You are ready to go - when you change anything in the CV.tex file, the TeXlipse 
 I prefer and recommend to use [JabRef](http://www.jabref.org/), a cross-platform bibliography management tool, which works great with the bibliography in MS Word as well.
 
 [BibDesk](https://bibdesk.sourceforge.io/) is a nice alternative for Mac.
-
