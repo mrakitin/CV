@@ -1,0 +1,8 @@
+dist: xenial
+language: generic
+services:
+  - docker
+sudo: false
+
+script:
+  - ./docker-build.sh
