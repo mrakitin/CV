@@ -53,7 +53,7 @@ for %%b in (%cv% %pubs% %jobs% %edu% %awards% %skills% %refs% %pubs% %confs% %bi
     set compressedpdf="%%b_comp.pdf"
 
     :: Sequence of LaTeX commands from https://tex.stackexchange.com/a/13012.
-    :: Solution for the local variables from http://stackoverflow.com/a/13809834/4143531.
+    :: Solution for the local variables from https://stackoverflow.com/a/13809834/4143531.
     latex %nonstop% %outdir% !texfile!
     bibtex %tmpdir%\!auxfile!
     latex %nonstop% %outdir% !texfile!
