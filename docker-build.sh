@@ -10,6 +10,7 @@ command="apt-get update && apt-get install ghostscript -y && cd ${mntdir} && ./b
 # docker pull texlive/texlive-full:2017
 
 DOCKER_IMAGE=mirisbowring/texlive_ctan_full
+DOCKER_TAG=2019
 
-docker pull ${DOCKER_IMAGE}
-docker run -it --rm -v $PWD:${mntdir} ${DOCKER_IMAGE} bash -c "$command"
+docker pull ${DOCKER_IMAGE}:${DOCKER_TAG}
+docker run -it --rm -v $PWD:${mntdir} ${DOCKER_IMAGE}:${DOCKER_TAG} bash -c "$command"
