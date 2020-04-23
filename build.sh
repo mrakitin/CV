@@ -50,7 +50,3 @@ for b in $cv $pubs $jobs $edu $awards $skills $refs $pubs $confs $bio; do
     $gs -sDEVICE=pdfwrite -dCompatibilityLevel=$compatibility -dPDFSETTINGS=/$quality -dNOPAUSE -dQUIET -dBATCH -q -sOutputFile=$compressedpdf $finalpdf
     mv -fv $compressedpdf $finalpdf
 done
-
-
-exit 0
-
