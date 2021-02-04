@@ -22,14 +22,14 @@ command="apt-get update && apt-get install -y ghostscript && cd ${mntdir} && ./b
 # DOCKER_TAG=2019
 
 # This Docker image ...
-DOCKER_IMAGE=laurenss/texlive-full
+DOCKER_IMAGE=texlive/texlive
 # DOCKER_TAG=2013
 # DOCKER_TAG=2015
 # DOCKER_TAG=2016
 # DOCKER_TAG=2017
 # DOCKER_TAG=2018
-DOCKER_TAG=2019
-# DOCKER_TAG=latest
+# DOCKER_TAG=2019
+DOCKER_TAG=latest
 
 docker pull ${DOCKER_IMAGE}:${DOCKER_TAG}
 docker run -it --rm -v $PWD:${mntdir} ${DOCKER_IMAGE}:${DOCKER_TAG} bash -c "$command"
