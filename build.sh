@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -vxeuo pipefail
+# set -vxeuo pipefail
 
 # General options:
 tmpdir='tmp'
