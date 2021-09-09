@@ -27,3 +27,7 @@ jobs:
         run: |
           set -vxeuo pipefail
           ./build.sh
+
+      - name: Check logs
+        run: |
+          cat tmp/RakitinMS_CV.log
