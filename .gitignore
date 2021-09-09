@@ -17,3 +17,6 @@ tmp/
 
 # vim:
 .*.swp
+
+
+.DS_Store
