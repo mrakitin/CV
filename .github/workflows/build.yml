@@ -1,0 +1,24 @@
+name: Build PDFs
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build all .pdf files
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: |
+          set -vxeuo pipefail
+          apt-get update && apt-get install -y texlive ghostscript
+
+      - name: Run build
+        run: |
+          set -vxeuo pipefail
+          ./build.sh
