@@ -50,8 +50,12 @@ jobs:
 
           # Define the branch to which we push the resulting files:
           export NOW="$(date +%Y%m%d%H%M%S)"
-          export PUSH_BRANCH="${NOW}"
-          # export PUSH_BRANCH="main"
+          # https://docs.github.com/en/actions/learn-github-actions/contexts#determining-when-to-use-contexts
+          if [ "${GITHUB_REF}" == "refs/heads/main" ]; then
+              export PUSH_BRANCH="main"
+          else
+              export PUSH_BRANCH="${NOW}"
+          fi
 
           # This is needed to propagate this variable to other steps:
           echo "PUSH_BRANCH=${PUSH_BRANCH}" >> $GITHUB_ENV
@@ -85,7 +89,7 @@ jobs:
 
       - name: Push new files
         # if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        if: ${{ github.event_name == 'pull_request' }}
+        # if: ${{ github.event_name == 'pull_request' }}
         run: |
           set -vxeuo pipefail
 
