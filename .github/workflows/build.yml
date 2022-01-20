@@ -31,3 +31,16 @@ jobs:
       - name: Check logs
         run: |
           cat tmp/RakitinMS_CV.log
+
+      - name: Commit and push new files
+        run: |
+          git remote -v
+          git branch -avv
+          git status
+          git config --global user.name "auto-push"
+          git config --global user.email "mrakitin@users.noreply.github.com"
+          export NOW=$(date +%F-%T)
+          git add .
+          git commit -m "Committing at ${now}"
+          git log -n5
+          # git push
