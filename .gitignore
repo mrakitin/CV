@@ -8,6 +8,10 @@
 *.synctex.gz
 tmp/
 *.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
 *.log
 *.out
 
