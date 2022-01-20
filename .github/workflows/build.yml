@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+    env:
+      TZ: America/New_York
 
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-        env:
-          TZ: America/New_York
 
       - name: Install Dependencies
         run: |
