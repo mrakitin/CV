@@ -15,6 +15,8 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v2
         with:
+          # Fetch all history for all tags and branches
+          # (https://github.com/actions/checkout#fetch-all-history-for-all-tags-and-branches)
           fetch-depth: 0
 
       - name: Install Dependencies
@@ -46,24 +48,40 @@ jobs:
         run: |
           set -vxeuo pipefail
 
+          # Define the branch to which we push the resulting files:
           export NOW="$(date +%Y%m%d%H%M%S)"
           export PUSH_BRANCH="${NOW}"
           # export PUSH_BRANCH="main"
 
+          # This is needed to propagate this variable to other steps:
+          echo "PUSH_BRANCH=${PUSH_BRANCH}" >> $GITHUB_ENV
+
+          # Set required git config parameters:
+          echo "::group::git config"
           git config --global user.name "bot-auto-push"
           git config --global user.email "mrakitin@users.noreply.github.com"
+          echo "::endgroup::"
 
+          # Print diagnostics information in the expandable group in the log:
+          echo "::group::git state"
           git remote -v
           git branch -avv
           git status
+          echo "::endgroup::"
 
+          # Conditionally check out to a new branch:
           if [ "${PUSH_BRANCH}" != "main" ]; then
-              git checkout -b ${PUSH_BRANCH}
+              git checkout -b "${PUSH_BRANCH}"
           fi
 
+          # Add files and commit:
           git add *.pdf
           git commit -m "[BOT] Update on ${NOW}"
+
+          # Print diagnostics information in the expandable group in the log:
+          echo "::group::git log"
           git log -n5
+          echo "::endgroup::"
 
       - name: Push new files
         # if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -71,13 +89,20 @@ jobs:
         run: |
           set -vxeuo pipefail
 
+          # Print diagnostics information in the expandable groups in the log:
           echo "::group::env"
           env | sort -u
           echo "::endgroup::"
 
+          echo "::group::git state"
           git remote -v
           git branch -avv
           git status
+          echo "::endgroup::"
 
+          echo "::group::git log"
           git log -n5
-          git push -u origin ${PUSH_BRANCH}
+          echo "::endgroup::"
+
+          # Push the changes to the target branch:
+          git push -u origin "${PUSH_BRANCH}"
