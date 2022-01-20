@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# set -vxeuo pipefail
+
 # General options:
 tmpdir='tmp'
 owner='RakitinMS'
