@@ -90,6 +90,8 @@ jobs:
       - name: Push new files
         # if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         # if: ${{ github.event_name == 'pull_request' }}
+        # Only git push on the 'push' action to avoid potential duplicate branches:
+        if: ${{ github.event_name == 'push' }}
         run: |
           set -vxeuo pipefail
 
