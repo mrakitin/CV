@@ -84,7 +84,7 @@ jobs:
 
           # Print diagnostics information in the expandable group in the log:
           echo "::group::git log"
-          git log -n5
+          git log -n5 --stat
           echo "::endgroup::"
 
       - name: Push new files
@@ -107,7 +107,7 @@ jobs:
           echo "::endgroup::"
 
           echo "::group::git log"
-          git log -n5
+          git log -n5 --stat
           echo "::endgroup::"
 
           # Push the changes to the target branch:
