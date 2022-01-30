@@ -18,6 +18,7 @@ tmp/
 # JabRef/BibTeX:
 *.bib.bak
 *.bib.sav
+*.bib.sav.tmp
 
 # vim:
 .*.swp
