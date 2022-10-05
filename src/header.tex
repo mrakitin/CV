@@ -72,10 +72,10 @@
 % Decorate links:
 \definecolor{linkcolor}{HTML}{2A5DB0}  % from https://gigaom.com/2009/07/09/when-it-comes-to-links-color-matters/
 \newcommand{\colorify}[1]{\textcolor{linkcolor}{#1}}
-\newcommand{\mylink}[1]{\href{#1}{\colorify{#1}}}
-\newcommand{\mylinkn}[2]{\href{#1}{\colorify{#2}}}
-\newcommand{\mylinkb}[2]{\href{#1}{#2}}
-\newcommand{\mylinkm}[1]{\href{mailto:#1}{\colorify{#1}}}
+\newcommand{\mylink}[1]{\href{#1}{\colorify{#1}}}          % just link
+\newcommand{\mylinkn}[2]{\href{#1}{\colorify{#2}}}         % colored named link
+\newcommand{\mylinkb}[2]{\href{#1}{#2}}                    % non-colored named link
+\newcommand{\mylinkm}[1]{\href{mailto:#1}{\colorify{#1}}}  % email link
 
 % Bib file:
 \def\bibfile{RakitinMS_pubs}
