@@ -1,0 +1,18 @@
+[checking]
+maxrequestspersecond=10
+recursionlevel=1
+anchors=1
+sslverify=0
+threads=1
+
+[filtering]
+ignore=
+  https://www.researchgate.net/.*
+ignorewarnings=http-robots-denied,https-certificate-error
+checkextern=1
+
+[output]
+# Set to 1 if you want see the full output, not only warnings and errors
+verbose=1
+
+[AnchorCheck]
