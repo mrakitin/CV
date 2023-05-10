@@ -2,7 +2,10 @@ import os
 import sys
 
 links_file = sys.argv[1]
-html_file = f"{os.path.splitext(os.path.basename(links_file))[0]}.html"
+if len(sys.argv) > 2:
+    html_file = sys.argv[2]
+else:
+    html_file = f"{os.path.splitext(os.path.basename(links_file))[0]}.html"
 
 print(f"{links_file = }\n{html_file = }")
 

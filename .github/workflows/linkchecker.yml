@@ -1,0 +1,38 @@
+name: Check links
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linkchecker:
+    name: Check links in the files are accessible
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    env:
+      TZ: America/New_York
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+        with:
+          # Fetch all history for all tags and branches
+          # (https://github.com/actions/checkout#fetch-all-history-for-all-tags-and-branches)
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v4
+
+      - name: Install linkchecker
+        run: |
+          set -vxeuo pipefail
+          pip install linkchecker
+
+      - name: Run checks
+        run: |
+          set -vxeuo pipefail
+          bash scripts/gen-links-html.sh

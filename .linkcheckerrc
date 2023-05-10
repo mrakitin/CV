@@ -1,5 +1,5 @@
 [checking]
-maxrequestspersecond=10
+maxrequestspersecond=5
 recursionlevel=1
 anchors=1
 sslverify=0
@@ -7,7 +7,9 @@ threads=1
 
 [filtering]
 ignore=
-  https://www.researchgate.net/.*
+  https://www.researchgate.net
+  http://han.ess.sunysb.edu
+  http://qsh.ess.sunysb.edu:8000/
 ignorewarnings=http-robots-denied,https-certificate-error
 checkextern=1
 
