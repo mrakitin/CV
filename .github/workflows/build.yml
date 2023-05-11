@@ -45,6 +45,11 @@ jobs:
         run: |
           cat tmp/RakitinMS_CV.log
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: pdfs
+          path: Rakitin*.pdf
+
       - name: Commit new files
         run: |
           set -vxeuo pipefail
