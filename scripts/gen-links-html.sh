@@ -13,10 +13,8 @@ echo "Scripts dir : ${SCRIPTS_DIR}"
 echo "Links file  : ${LINKS_FILE}"
 echo "HTML file   : ${HTML_FILE}"
 
-egrep -r -o -E '{http.*://.*}' \
-    ${REPO_ROOT}/**.tex \
-    ${REPO_ROOT}/src/**.tex \
-    ${REPO_ROOT}/**.bib \
+find ${REPO_ROOT}/ \( -name '**.tex' -o -name '**.bib'  \) \
+    -exec grep -oE '{http.*://.*}' {} \; \
     | cut -d'{' -f2 | cut -d'}' -f1 \
     | grep ^http \
     | sed 's/\\//g' \
