@@ -14,7 +14,7 @@ echo "Links file  : ${LINKS_FILE}"
 echo "HTML file   : ${HTML_FILE}"
 
 find ${REPO_ROOT}/ \( -name '**.tex' -o -name '**.bib'  \) \
-    -exec grep -oE '{http.*://.*}' {} \; \
+    -exec grep -oE '\{http.*://.*\}' {} \; \
     | cut -d'{' -f2 | cut -d'}' -f1 \
     | grep ^http \
     | sed 's/\\//g' \
