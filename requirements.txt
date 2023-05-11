@@ -1,0 +1,3 @@
+linkchecker
+pre-commit
+texsoup
