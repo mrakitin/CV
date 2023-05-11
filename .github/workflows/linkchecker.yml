@@ -40,6 +40,7 @@ jobs:
           bash scripts/gen-links-html.sh
 
       - uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: all-links
           path: all-links*.*
