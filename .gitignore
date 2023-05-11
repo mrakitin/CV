@@ -27,4 +27,4 @@ tmp/
 .DS_Store
 
 # linkchecker-related files.
-all-links.*
+all-links*.*

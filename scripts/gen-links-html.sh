@@ -13,7 +13,7 @@ echo "Scripts dir : ${SCRIPTS_DIR}"
 echo "Links file  : ${LINKS_FILE}"
 echo "HTML file   : ${HTML_FILE}"
 
-git grep -r http ${REPO_ROOT}/src/*.tex | cut -d'{' -f2 | cut -d'}' -f1 | grep ^http | sed 's/\\//g' | sort -u > ${LINKS_FILE}
+git grep -r -o -E '{http.*://.*}' ${REPO_ROOT}/**.tex ${REPO_ROOT}/src/**.tex | cut -d'{' -f2 | cut -d'}' -f1 | grep ^http | sed 's/\\//g' | sort -u > ${LINKS_FILE}
 
 python ${SCRIPTS_DIR}/format-html.py "${LINKS_FILE}" "${HTML_FILE}"
 
