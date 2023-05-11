@@ -1,0 +1,22 @@
+[checking]
+maxrequestspersecond=5
+recursionlevel=1
+anchors=1
+sslverify=0
+threads=1
+
+[filtering]
+ignore=
+  https://www.researchgate.net
+  https://www.elettra.eu
+  https://www.tandfonline.com
+  https://www.osti.gov
+  https://doi.org/10.18429/
+ignorewarnings=http-robots-denied,https-certificate-error
+checkextern=1
+
+[output]
+# Set to 1 if you want see the full output, not only warnings and errors
+verbose=1
+
+[AnchorCheck]
