@@ -17,4 +17,4 @@ git grep -r http ${REPO_ROOT}/src/*.tex | cut -d'{' -f2 | cut -d'}' -f1 | grep ^
 
 python ${SCRIPTS_DIR}/format-html.py "${LINKS_FILE}" "${HTML_FILE}"
 
-linkchecker --check-extern ${HTML_FILE}
+linkchecker --check-extern --config=${REPO_ROOT}/.linkcheckerrc ${HTML_FILE}
