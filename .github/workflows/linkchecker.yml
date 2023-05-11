@@ -30,6 +30,7 @@ jobs:
       - name: Install linkchecker
         run: |
           set -vxeuo pipefail
+          # https://linkchecker.github.io/linkchecker/
           pip install linkchecker
 
       - name: Run checks
@@ -40,4 +41,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: all-links
-          path: all-links.*
+          path: all-links*.*

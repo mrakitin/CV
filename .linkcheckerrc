@@ -9,6 +9,9 @@ threads=1
 ignore=
   https://www.researchgate.net
   https://www.elettra.eu
+  https://www.tandfonline.com
+  https://www.osti.gov
+  https://doi.org/10.18429/
 ignorewarnings=http-robots-denied,https-certificate-error
 checkextern=1
 
