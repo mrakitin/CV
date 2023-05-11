@@ -13,11 +13,17 @@ echo "Scripts dir : ${SCRIPTS_DIR}"
 echo "Links file  : ${LINKS_FILE}"
 echo "HTML file   : ${HTML_FILE}"
 
-egrep -r -o -E "{http(.*)://(.*)}" \
+egrep -r -o -E '{http.*://.*}' \
     ${REPO_ROOT}/**.tex \
     ${REPO_ROOT}/src/**.tex \
     ${REPO_ROOT}/**.bib \
-    | cut -d'{' -f2 | cut -d'}' -f1 | grep ^http | sed 's/\\//g' | sort -u > ${LINKS_FILE}
+    | cut -d'{' -f2 | cut -d'}' -f1 \
+    | grep ^http \
+    | sed 's/\\//g' \
+    | sort -u \
+        > ${LINKS_FILE}
+
+echo "Number of lines in ${LINKS_FILE}: $(cat ${LINKS_FILE} | wc -l | sed 's/ //g')"
 
 python ${SCRIPTS_DIR}/format-html.py "${LINKS_FILE}" "${HTML_FILE}"
 
