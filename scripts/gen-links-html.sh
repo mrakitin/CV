@@ -13,7 +13,7 @@ echo "Scripts dir : ${SCRIPTS_DIR}"
 echo "Links file  : ${LINKS_FILE}"
 echo "HTML file   : ${HTML_FILE}"
 
-git grep -r -o -E '{http(.*)://(.*)}' \
+egrep -r -o -E "{http(.*)://(.*)}" \
     ${REPO_ROOT}/**.tex \
     ${REPO_ROOT}/src/**.tex \
     ${REPO_ROOT}/**.bib \
