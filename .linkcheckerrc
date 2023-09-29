@@ -12,6 +12,9 @@ ignore=
   https://www.tandfonline.com
   https://www.osti.gov
   https://doi.org/10.18429/
+  https://doi.org/10.1080/00268976.2011.645895
+  https://doi.org/10.1080/08940886.2018.1460173
+  https://doi.org/10.1080/08940886.2019.1608121
 ignorewarnings=http-robots-denied,https-certificate-error
 checkextern=1
 
