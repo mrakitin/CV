@@ -15,7 +15,7 @@ ignore=
   https://doi.org/10.1080/00268976.2011.645895
   https://doi.org/10.1080/08940886.2018.1460173
   https://doi.org/10.1080/08940886.2019.1608121
-ignorewarnings=http-robots-denied,https-certificate-error
+ignorewarnings=http-robots-denied,https-certificate-error,http-redirected
 checkextern=1
 
 [output]
