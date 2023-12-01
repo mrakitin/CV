@@ -21,6 +21,10 @@ find ${REPO_ROOT}/ \( -name '**.tex' -o -name '**.bib'  \) \
     | sort -u \
         > ${LINKS_FILE}
 
+python ${SCRIPTS_DIR}/links-from-texsoup.py | sort -u >> ${LINKS_FILE}
+
+cat ${LINKS_FILE} | sort -u > .${LINKS_FILE}.tmp && mv -v .${LINKS_FILE}.tmp ${LINKS_FILE}
+
 echo "Number of lines in ${LINKS_FILE}: $(cat ${LINKS_FILE} | wc -l | sed 's/ //g')"
 
 python ${SCRIPTS_DIR}/format-html.py "${LINKS_FILE}" "${HTML_FILE}"

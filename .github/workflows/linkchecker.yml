@@ -33,13 +33,13 @@ jobs:
       - name: Install linkchecker
         run: |
           set -vxeuo pipefail
-          # https://linkchecker.github.io/linkchecker/
-          pip install linkchecker
+          pip install -r requirements.txt
 
       - name: Run checks
         run: |
           set -vxeuo pipefail
           git --version
+          # Uses https://linkchecker.github.io/linkchecker/.
           bash scripts/gen-links-html.sh
 
       - uses: actions/upload-artifact@v3
