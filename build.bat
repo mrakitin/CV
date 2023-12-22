@@ -16,7 +16,7 @@
 
 :: General options:
 set tmpdir=tmp
-set owner=RakitinMS
+set owner=RakitinM
 
 :: Files to generate pdfs for:
 set cv=%owner%_CV

@@ -1,5 +1,5 @@
 # CV
-Here is my [CV](RakitinMS_CV.pdf). See more at [NSLS-II website](https://psstaff.bnl.gov/staff.aspx?id=92991).
+Here is my [CV](RakitinM_CV.pdf). See more at the [BNL website](https://www.bnl.gov/staff/mrakitin).
 
 # Compile instructions:
 - Install [TeX Live](https://www.tug.org/texlive/acquire-netinstall.html). On Windows all the required packages are installed with TeX Live. On Linux install LaTeX and additional packages as follows:

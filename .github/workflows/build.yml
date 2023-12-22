@@ -46,7 +46,7 @@ jobs:
 
       - name: Check logs
         run: |
-          cat tmp/RakitinMS_CV.log
+          cat tmp/RakitinM_CV.log
 
       - uses: actions/upload-artifact@v3
         with:

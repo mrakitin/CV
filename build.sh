@@ -4,7 +4,7 @@
 
 # General options:
 tmpdir='tmp'
-owner='RakitinMS'
+owner='RakitinM'
 
 # Files to generate pdfs for:
 cv="${owner}_CV"
