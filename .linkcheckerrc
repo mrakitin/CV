@@ -23,7 +23,7 @@ ignore=
   https://doi.org/10.1063/1.5084710
   https://doi.org/10.1063/1.5084711
   https://doi.org/10.1109/SCW63240.2024.00271
-  https://scholar.google.com/citations?user=kK04dAcAAAAJ&hl=en
+  https://scholar.google.com/*
 ignorewarnings=http-robots-denied,https-certificate-error,http-redirected
 checkextern=1
 
