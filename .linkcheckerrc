@@ -20,6 +20,8 @@ ignore=
   https://doi.org/10.1080/08940886.2019.1608121
   https://doi.org/10.1103/PhysRevResearch.4.033228
   https://spie.org/OP23O/conferencedetails/computational-methods-for-x-ray-optics
+  https://scholar.google.com/citations?user=kK04dAcAAAAJ&hl=en
+  https://pubs.aip.org/aip/acp/article/
 ignorewarnings=http-robots-denied,https-certificate-error,http-redirected
 checkextern=1
 
